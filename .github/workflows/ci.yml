@@ -1,1 +1,20 @@
 
+# File: .github/workflows/ci.yml
+
+name: CI-Pipeline
+
+on:
+  push:
+    branches:
+      - main  # ya master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run a Hello Script
+        run: echo "Hello Guruji, GitHub Actions ka pehla step!"
