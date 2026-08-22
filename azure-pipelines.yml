@@ -1,8 +1,10 @@
-trigger: none 
-pool: Default
+trigger: none
 
-steps: 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'Write-Host "Hello World"'
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    echo "Hello World"
+    echo "Agent is working"
+  displayName: 'Test pipeline'
